@@ -6,16 +6,63 @@ body{
 	padding: 0;
 	margin: 0;
 	font-family: "Helvetica", sans-serif;
+	background-color: lighten(#7da3a1, 30%);
+}
+
+h1, h2, h3{
+	.title-font;
+}
+
+a{
+	text-decoration: none;
+	color: #07575b;
+
+	&:visited{
+		color: #07575b;
+	}
+
+	&:hover{
+		color: #66a5ad;
+	}
 }
 
 #page-header{
+	.title-font;
+
 	width: 70%;
 	max-width: 900px;
 	margin: 0 auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin-top: 2rem;
+	background-color: white;
+
+	h1{
+		color: darken(#003b46, 7%);
+		font-size: 2.5rem;
+	}
 }
 
 #page-content{
 	width: 70%;
 	max-width: 900px;
 	margin: 0 auto;
+	background-color: white;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin-bottom: 4rem;
+
+	#sponsors-section{
+		img{
+			display: block;
+		}
+	}
+}
+
+.title-font(){
+	font-family: "Roboto Slab", serif;
 }

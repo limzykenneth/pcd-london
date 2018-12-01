@@ -10,21 +10,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 	<link rel="stylesheet/less" type="text/css" href="./style.less">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js" integrity="sha256-Hu8qm4q26AVXOWGlyZqO04hF+8WlulgTj51vr0FgNG8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js" integrity="sha256-D/ObQKlMXTTSWaefJnNgyHjbE4HSZWoJ1zh72TzHPUA=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js" integrity="sha256-J4zMW4h1Q+phN9U/KCNKRDlMGCuL8uqSsLVeclTF46k=" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/opentype.js@latest/dist/opentype.min.js"></script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.min.js" integrity="sha256-h3LBCWiUL8YMqRlbJ/dk4Xm+kyAPC7F1wC6tplASWrU=" crossorigin="anonymous"></script>
 </head>
 <body>
 	<header id="page-header">
 		<h1>Processing Community Day London 2019</h1>
+		 <!-- <canvas id="header" height="100" style="z-index:1;margin-top:100px; margin-left:-50px; "></canvas> -->
+		<nav>
+			<a class="section-links" href="#">About</a> | <a class="section-links" href="#direction">Getting Here</a> | <a class="section-links" href="#access">Access</a> | <a class="section-links" href="#conduct">Code of Conduct</a> | <a class="section-links" href="#tickets">Tickets</a> | <a class="section-links" href="#sponsors">Sponsors</a>
+		</nav>
 	</header>
 
 	<div id="page-content">
-		<section>
+		<section id="about-section">
 			<h2>About</h2>
 			<p>
 				Processing Community Day in London is Saturday, 26th January 2019 in the Creative Technology Lab at London College of Communication, Elephant & Castle. PCD @ London is a day to celebrate art, code, and diversity.
@@ -51,9 +59,7 @@
 
 		</section>
 
-		<hr/>
-
-		<section>
+		<section id="direction-section">
 			<h2>Getting here</h2>
 			<p>
 				PCD @ London 2019 is being hosted by London College of Communication right on the (former) roundabout at Elephant & Castle in the heart of London.
@@ -66,6 +72,9 @@
 			</p>
 
 			<h3>Map</h3>
+			<p>
+				<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJS_Xam5gEdkgRNf6fOQt4nG4&key=AIzaSyChT0zXfTBNpIw3O25MDj_wbMKu4XkuZ1s" allowfullscreen></iframe>
+			</p>
 
 			<h3>Tube</h3>
 			<p>
@@ -105,9 +114,7 @@
 			</p>
 		</section>
 
-		<hr/>
-
-		<section>
+		<section id="access-section">
 			<h2>Access</h2>
 			<h3>Travel</h3>
 			<p>
@@ -129,9 +136,7 @@
 			</p>
 		</section>
 
-		<hr/>
-
-		<section>
+		<section id="conduct-section">
 			<h2>
 				Code of Conduct
 			</h2>
@@ -220,9 +225,7 @@
 			</p>
 		</section>
 
-		<hr/>
-
-		<section>
+		<section id="tickets-section">
 			<h2>Tickets</h2>
 			<p>
 				Tickets are not yet available, but will be linked here when they are so keep checking back here.
@@ -232,9 +235,7 @@
 			</p>
 		</section>
 
-		<hr/>
-
-		<section>
+		<section id="sponsors-section">
 			<h2>Sponsors</h2>
 			<p>
 				Event logistics, staffing and security is sponsored by <a target="_blank" href="http://arts.ac.uk/lcc">London College of Communication</a>.
@@ -246,6 +247,7 @@
 			</p>
 		</section>
 	</div>
+
 	<script src="./main.js"></script>
 </body>
 </html>

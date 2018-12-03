@@ -1,14 +1,44 @@
 var sketch = function(p){
-	p.preload = function(){
+	var font;
+	var bounds = [];
+	var points = [];
+	var canvas;
+	var titleStr = "Processing Community Day";
 
+	p.preload = function(){
+		font = p.loadFont("./assets/fonts/RobotoSlab-Regular.ttf");
 	};
 
 	p.setup = function(){
+		canvas = p.createCanvas(700, 100);
+		canvas.parent("#canvas-container");
+		p.resizeCanvas(canvas.parent().clientWidth, 100);
+		p.background(255);
 
+		var splitStr = titleStr.split();
+		for(var i=0; i<splitStr.length; i++){
+			points.push(font.textToPoints(splitStr[i], 0, 0, 14, {
+				sampleFactor: 2,
+				simplifyThreshold: 0
+			}));
+
+			bounds.push(font.textBounds(splitStr[i], 0, 0, 14));
+		}
 	};
 
 	p.draw = function(){
+		p.background(255);
 
+		p.stroke("#000000");
+		p.translate(10, 15);
+		for(let j=0; j<points.length; j++){
+			p.translate(-bounds[j].x * (p.width - 15) / bounds[j].w, -bounds[j].y * (p.height - 15) / bounds[j].h);
+			for(let i=0; i<points[j].length; i++){
+				p.point(points[j][i].x * (p.width - 15) / bounds[j].w, points[j][i].y * (p.height - 15) / bounds[j].h);
+
+
+			}
+		}
 	};
 
 	p.windowResized = function(){
@@ -29,7 +59,7 @@ $(document).ready(function() {
 		hashChange();
 	});
 
-
+	new p5(sketch);
 
 
 	// daniloTitleSketch();

@@ -59,9 +59,8 @@ $(document).ready(function() {
 		hashChange();
 	});
 
-	new p5(sketch);
-
-
+	// $("#page-header #title-container #canvas-container .site-title").css("display", "none");
+	// new p5(sketch);
 	// daniloTitleSketch();
 
 	// Utilities

@@ -44,15 +44,35 @@ a{
 		font-size: 2.5rem;
 	}
 
-	#pcd-logo{
-		dislpay: inline-block;
-		width: 100px;
-		height: 100px;
-	}
+	#title-container{
+		display: flex;
 
-	#canvas-container{
-		display: inline-block;
-		height: 100px;
+		#pcd-logo{
+			width: 100px;
+			height: 100px;
+		}
+
+		#canvas-container{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 100px;
+			width: ~"calc(100% - 100px - 2rem)";
+
+			.site-title{
+				display: block;
+				margin: 0;
+				margin-top: 1.2rem;
+				margin-left: 0.5rem;
+				margin-bottom: 0;
+				font-size: 3rem;
+			}
+
+			.site-subtitle{
+				margin-top: 0rem;
+				margin-left: 0.5rem;
+			}
+		}
 	}
 }
 

@@ -1,0 +1,26 @@
+{
+  "name": "pcd-london",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.html",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "lessc style.less style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limzykenneth/pcd-london.git"
+  },
+  "author": "Kenneth Lim <limzy.kenneth@gmail.com> (https://designerken.be/designing)",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/limzykenneth/pcd-london/issues"
+  },
+  "homepage": "https://github.com/limzykenneth/pcd-london#readme",
+  "devDependencies": {
+    "less": "^3.9.0"
+  }
+}

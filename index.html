@@ -1,532 +1,501 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Processing Community Day London 2019</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="cache-control" content="no-cache" />
+	<head>
+		<title>Processing Community Day London 2019</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="cache-control" content="no-cache" />
 
-    <!-- favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="./favicon/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="./favicon/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="./favicon/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="./favicon/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="./favicon/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="./favicon/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="./favicon/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="./favicon/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./favicon/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./favicon/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="./favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="./favicon/ms-icon-144x144.png"
-    />
-    <meta name="theme-color" content="#ffffff" />
+		<!-- favicon -->
+		<link
+			rel="apple-touch-icon"
+			sizes="57x57"
+			href="./favicon/apple-icon-57x57.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="60x60"
+			href="./favicon/apple-icon-60x60.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="72x72"
+			href="./favicon/apple-icon-72x72.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="./favicon/apple-icon-76x76.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="./favicon/apple-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="./favicon/apple-icon-120x120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="./favicon/apple-icon-144x144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="./favicon/apple-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./favicon/apple-icon-180x180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="./favicon/android-icon-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="96x96"
+			href="./favicon/favicon-96x96.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="./favicon/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta
+			name="msapplication-TileImage"
+			content="./favicon/ms-icon-144x144.png"
+		/>
+		<meta name="theme-color" content="#ffffff" />
 
-    <!-- iOS -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- iOS -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Slab"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+			integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"
-      integrity="sha256-Hu8qm4q26AVXOWGlyZqO04hF+8WlulgTj51vr0FgNG8="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"
-      integrity="sha256-D/ObQKlMXTTSWaefJnNgyHjbE4HSZWoJ1zh72TzHPUA="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"
-      integrity="sha256-J4zMW4h1Q+phN9U/KCNKRDlMGCuL8uqSsLVeclTF46k="
-      crossorigin="anonymous"
-    ></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"
+			integrity="sha256-Hu8qm4q26AVXOWGlyZqO04hF+8WlulgTj51vr0FgNG8="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"
+			integrity="sha256-D/ObQKlMXTTSWaefJnNgyHjbE4HSZWoJ1zh72TzHPUA="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"
+			integrity="sha256-J4zMW4h1Q+phN9U/KCNKRDlMGCuL8uqSsLVeclTF46k="
+			crossorigin="anonymous"
+		></script>
 
-    <!--
-      <script src="https://cdn.jsdelivr.net/npm/opentype.js@latest/dist/opentype.min.js"></script>
-    -->
-  </head>
-  <body>
-    <div id="sketch-holder"></div>
+		<!--
+			<script src="https://cdn.jsdelivr.net/npm/opentype.js@latest/dist/opentype.min.js"></script>
+		-->
+	</head>
+	<body>
+		<div id="sketch-holder"></div>
 
-    <div id="wrapper">
-      <header id="page-header">
-        <div id="title-container">
-          <img id="pcd-logo" src="./assets/pcd-logo.jpg" />
-          <div id="canvas-container">
-            <h1 class="site-title">Processing Community Day</h1>
-            <h3 class="site-subtitle">London</h3>
-          </div>
-        </div>
+		<div id="wrapper">
+			<header id="page-header">
+				<div id="title-container">
+					<img id="pcd-logo" src="./assets/pcd-logo.jpg" />
+					<div id="canvas-container">
+						<h1 class="site-title">Processing Community Day</h1>
+						<h3 class="site-subtitle">London</h3>
+					</div>
+				</div>
 
-        <h3>26th January 2019, London College of Communication</h3>
+				<h3>26th January 2019, London College of Communication</h3>
 
-        <nav>
-          <a class="section-links" href="#">About</a> |
-          <a class="section-links" href="#direction">Getting Here</a> |
-          <a class="section-links" href="#access">Access</a> |
-          <a class="section-links" href="#conduct">Code of Conduct</a> |
-          <a class="section-links" href="#tickets">Tickets</a> |
-          <a class="section-links" href="#sponsors">Sponsors</a>
-        </nav>
-      </header>
+				<nav>
+					<a class="section-links" href="#">About</a> |
+					<a class="section-links" href="#direction">Getting Here</a> |
+					<a class="section-links" href="#access">Access</a> |
+					<a class="section-links" href="#conduct">Code of Conduct</a> |
+					<a class="section-links" href="#tickets">Tickets</a> |
+					<a class="section-links" href="#sponsors">Sponsors</a>
+				</nav>
+			</header>
 
-      <div id="page-content">
-        <section id="about-section">
-          <h2>About</h2>
-          <p>
-            Processing Community Day in London is Saturday, 26th January 2019 in
-            the Creative Technology Lab at London College of Communication,
-            Elephant & Castle. PCD @ London is a day to celebrate art, code, and
-            diversity.
-          </p>
-          <p>
-            PCD @ London is organised by Danilo Di Cuia, Joel Gethin Lewis,
-            Kenneth Lim and Tom Lynch, hosted at London College of Communication
-            and proudly supported by the University of the Arts London Creative
-            Computing Institute.
-          </p>
+			<div id="page-content">
+				<section id="about-section">
+					<h2>About</h2>
+					<p>
+						Processing Community Day in London is Saturday, 26th January 2019 in
+						the Creative Technology Lab at London College of Communication,
+						Elephant & Castle. PCD @ London is a day to celebrate art, code, and
+						diversity.
+					</p>
+					<p>
+						PCD @ London is organised by Danilo Di Cuia, Joel Gethin Lewis,
+						Kenneth Lim and Tom Lynch, hosted at London College of Communication
+						and proudly supported by the University of the Arts London Creative
+						Computing Institute.
+					</p>
 
-          <h3>When:</h3>
-          <p>Saturday 26th January 2019, 10:30 - 17:00</p>
+					<h3>When:</h3>
+					<p>Saturday 26th January 2019, 10:30 - 17:00</p>
 
-          <h3>What:</h3>
-          <p>
-            We’ve lined up talks by
-            <a target="_blank" href="https://runemadsen.com/">Rune Madsen</a>,
-            <a target="_blank" href="https://www.matlo.me/">Matteo Logilo</a>,
-            <a target="_blank" href="http://leslienooteboom.com/"
-              >Leslie Nooteboom</a
-            >
-            and
-            <a
-              target="_blank"
-              href="https://www.doc.gold.ac.uk/~mas01rf/homepage/"
-              >Rebecca Fiebrink</a
-            >
-            as well as our already legendary community based lightning talks!
-            ⚡⚡⚡⚡
-          </p>
+					<h3>What:</h3>
+					<p>
+						We’ve lined up talks by
+						<a target="_blank" href="https://runemadsen.com/">Rune Madsen</a>,
+						<a target="_blank" href="https://www.matlo.me/">Matteo Logilo</a>,
+						<a target="_blank" href="http://leslienooteboom.com/">Leslie Nooteboom</a>
+						and
+						<a target="_blank" href="https://www.doc.gold.ac.uk/~mas01rf/homepage/">	Rebecca Fiebrink
+						</a>
+						as well as our already legendary community based lightning talks!
+						⚡⚡⚡⚡
+					</p>
 
-          <h3>Want to get involved?</h3>
-          <p>
-            We need volunteers to submit a 5 minute lighting talk, form here:
-            <a target="_blank" href="https://goo.gl/forms/RZaaLpPlp71NSPz82"
-              >https://goo.gl/forms/RZaaLpPlp71NSPz82</a
-            >
-          </p>
-        </section>
+					<h3>Want to get involved?</h3>
+					<p>
+						We need volunteers to submit a 5 minute lighting talk, form here:
+						<a target="_blank" href="https://goo.gl/forms/RZaaLpPlp71NSPz82">https://goo.gl/forms/RZaaLpPlp71NSPz82</a>
+					</p>
+				</section>
 
-        <section id="direction-section">
-          <h2>Getting here</h2>
-          <p>
-            PCD @ London 2019 is being hosted by London College of Communication
-            right on the (former) roundabout at Elephant & Castle in the heart
-            of London.
-          </p>
-          <p>
-            London College of Communication<br />
-            Elephant & Castle<br />
-            London<br />
-            SE1 6SB
-          </p>
+				<section id="direction-section">
+					<h2>Getting here</h2>
+					<p>
+						PCD @ London 2019 is being hosted by London College of Communication
+						right on the (former) roundabout at Elephant & Castle in the heart
+						of London.
+					</p>
+					<p>
+						London College of Communication<br />
+						Elephant & Castle<br />
+						London<br />
+						SE1 6SB
+					</p>
 
-          <h3>Map</h3>
-          <p>
-            <iframe
-              width="600"
-              height="450"
-              frameborder="0"
-              style="border:0"
-              src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJS_Xam5gEdkgRNf6fOQt4nG4&key=AIzaSyChT0zXfTBNpIw3O25MDj_wbMKu4XkuZ1s"
-              allowfullscreen
-            ></iframe>
-          </p>
+					<h3>Map</h3>
+					<p>
+						<iframe
+							width="600"
+							height="450"
+							frameborder="0"
+							style="border:0"
+							src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJS_Xam5gEdkgRNf6fOQt4nG4&key=AIzaSyChT0zXfTBNpIw3O25MDj_wbMKu4XkuZ1s"
+							allowfullscreen
+						></iframe>
+					</p>
 
-          <h3>Tube</h3>
-          <p>
-            Elephant & Castle London Underground station is well connected as it
-            is on both the southern end of the Bakerloo Line, and the Bank
-            branch of the Northern Line, please check the TfL website before
-            setting out to verify there are no engineering works that may
-            disrupt your journey. This station is in both Zones 1 & 2.
-          </p>
+					<h3>Tube</h3>
+					<p>
+						Elephant & Castle London Underground station is well connected as it
+						is on both the southern end of the Bakerloo Line, and the Bank
+						branch of the Northern Line, please check the TfL website before
+						setting out to verify there are no engineering works that may
+						disrupt your journey. This station is in both Zones 1 & 2.
+					</p>
 
-          <h3>National Rail</h3>
-          <p>
-            Elephant & Castle National Rail station is served by Thameslink
-            trains between and South Eastern trains. This station is in both
-            Zone 1 & 2.
-          </p>
+					<h3>National Rail</h3>
+					<p>
+						Elephant & Castle National Rail station is served by Thameslink
+						trains between and South Eastern trains. This station is in both
+						Zone 1 & 2.
+					</p>
 
-          <h3>Bus</h3>
-          <p>
-            Travelling to Elephant & Castle by London Bus is by far the best
-            option for many people as there are an extensive number regular of
-            buses running to, from and through Elephant & Castle.
-          </p>
-          <p>
-            There are many bus routes passing near by, however there are almost
-            thirty bus routes that serve the immediate area (passing over the
-            roundabout) these are:
-          </p>
-          <p>
-            1, P5, C10, 12, 35, 40, 45, 53, 63, 68, 100, 133, 148, 168, 155,
-            171, 172, 176, 188, 196, 333, 343, 344, 360, 363, 415, 453, 468
-          </p>
+					<h3>Bus</h3>
+					<p>
+						Travelling to Elephant & Castle by London Bus is by far the best
+						option for many people as there are an extensive number regular of
+						buses running to, from and through Elephant & Castle.
+					</p>
+					<p>
+						There are many bus routes passing near by, however there are almost
+						thirty bus routes that serve the immediate area (passing over the
+						roundabout) these are:
+					</p>
+					<p>
+						1, P5, C10, 12, 35, 40, 45, 53, 63, 68, 100, 133, 148, 168, 155,
+						171, 172, 176, 188, 196, 333, 343, 344, 360, 363, 415, 453, 468
+					</p>
 
-          <h3>Cycle</h3>
-          <p>
-            Visitors choosing to cycle are able to make use of the various Cycle
-            Superhighways and
-            <a
-              target="_blank"
-              href="http://content.tfl.gov.uk/q7-e-and-c-to-crystal-palace-map.pdf"
-              >Quietways</a
-            >
-            in the area, there is more information about this route on the
-            <a
-              target="_blank"
-              href="https://tfl.gov.uk/modes/cycling/routes-and-maps"
-              >TfL website</a
-            >.
-          </p>
-          <p>
-            There are a number of Cycle Hire (Boris Bike) stations in the area,
-            and a generous amount of public cycle parking at your own risk
-            outside the University.
-          </p>
-          <p>
-            <a
-              target="_blank"
-              href="https://tfl.gov.uk/maps?Input=London%20SE1%206SB,%20UK&InputGeolocation=0,0&googlePredictionId=ChIJv_PQcqIEdkgRI0ZsSGG16zQ"
-              >You can find a map of the near by stations on the TfL website the
-              postcode is SE1 6SB.</a
-            >
-          </p>
+					<h3>Cycle</h3>
+					<p>
+						Visitors choosing to cycle are able to make use of the various Cycle
+						Superhighways and
+						<a target="_blank" href="http://content.tfl.gov.uk/q7-e-and-c-to-crystal-palace-map.pdf">Quietways</a>
+						in the area, there is more information about this route on the
+						<a target="_blank" href="https://tfl.gov.uk/modes/cycling/routes-and-maps">TfL website</a>.
+					</p>
+					<p>
+						There are a number of Cycle Hire (Boris Bike) stations in the area,
+						and a generous amount of public cycle parking at your own risk
+						outside the University.
+					</p>
+					<p>
+						<a target="_blank" href="https://tfl.gov.uk/maps?Input=London%20SE1%206SB,%20UK&InputGeolocation=0,0&googlePredictionId=ChIJv_PQcqIEdkgRI0ZsSGG16zQ">You can find a map of the near by stations on the TfL website the postcode is SE1 6SB.</a>
+					</p>
 
-          <h3>Car</h3>
-          <p>
-            There is no parking at London College of Communications, however
-            there are facilities in the area, please look online for details,
-            but consider using an alternative method of transport to attend.
-          </p>
-        </section>
+					<h3>Car</h3>
+					<p>
+						There is no parking at London College of Communications, however
+						there are facilities in the area, please look online for details,
+						but consider using an alternative method of transport to attend.
+					</p>
+				</section>
 
-        <section id="access-section">
-          <h2>Access</h2>
-          <h3>Travel</h3>
-          <p>
-            Like all modern venues, London College of Communication is fully
-            accessible for those with mobility issues, however unfortunately the
-            local tube and railway stations
-            <strong>do not have step free access</strong>.
-          </p>
-          <p>
-            We recommended you take a bus service from near by stations such as
-            London Waterloo, Southwark, or London Bridge to access London
-            College of Communication.
-          </p>
-          <p>
-            Please
-            <a
-              target="_blank"
-              href="https://tfl.gov.uk/transport-accessibility/contact-us-about-accessibility"
-              >contact TfL regarding your travel plans for advice</a
-            >, if you have any questions about accessing the venue please feel
-            free to
-            <a href="mailto:creativetechnologylab@arts.ac.uk">contact us</a>.
-          </p>
+				<section id="access-section">
+					<h2>Access</h2>
+					<h3>Travel</h3>
+					<p>
+						Like all modern venues, London College of Communication is fully
+						accessible for those with mobility issues, however unfortunately the
+						local tube and railway stations
+						<strong>do not have step free access</strong>.
+					</p>
+					<p>
+						We recommended you take a bus service from near by stations such as
+						London Waterloo, Southwark, or London Bridge to access London
+						College of Communication.
+					</p>
+					<p>
+						Please
+						<a target="_blank" href="https://tfl.gov.uk/transport-accessibility/contact-us-about-accessibility">contact TfL regarding your travel plans for advice</a>, if you have any questions about accessing the venue please feel free to
+						<a href="mailto:creativetechnologylab@arts.ac.uk">contact us</a>.
+					</p>
 
-          <h3>Other access requirements</h3>
-          <p>
-            If you have any access requirements, please contact us after
-            registering for a ticket (once tickets are made available) so that
-            we can investigate what options are available.
-          </p>
-          <p>
-            Although the event is being generously hosted by London College of
-            Communication it is organised by a group of volunteers so any access
-            changes may be limited by our access to sponsors but we are keen to
-            try an accomodate everyone.
-          </p>
-        </section>
+					<h3>Other access requirements</h3>
+					<p>
+						If you have any access requirements, please contact us after
+						registering for a ticket (once tickets are made available) so that
+						we can investigate what options are available.
+					</p>
+					<p>
+						Although the event is being generously hosted by London College of
+						Communication it is organised by a group of volunteers so any access
+						changes may be limited by our access to sponsors but we are keen to
+						try an accomodate everyone.
+					</p>
+				</section>
 
-        <section id="conduct-section">
-          <h2>Code of Conduct</h2>
+				<section id="conduct-section">
+					<h2>Code of Conduct</h2>
 
-          <p>
-            All participants in Processing Community Day @ London (PCD @ London)
-            are required to agree to the following Code of Conduct. This
-            includes all attendees, speakers, performers, workshop leaders,
-            sponsors, volunteers, and staff.
-          </p>
-          <p>
-            The PCD @ London team is dedicated to providing a harassment-free
-            experience for everyone, regardless of gender, gender identity and
-            expression, sexual orientation, disability, mental illness,
-            neurotype, physical appearance, body, age, race, ethnicity,
-            nationality, language, or religion. We do not tolerate harassment of
-            participants in any form.
-          </p>
-          <p>
-            Anyone participant who violates this Code of Conduct may be
-            sanctioned or expelled from PCD @ London at the discretion of UAL
-            staff.
-          </p>
+					<p>
+						All participants in Processing Community Day @ London (PCD @ London)
+						are required to agree to the following Code of Conduct. This
+						includes all attendees, speakers, performers, workshop leaders,
+						sponsors, volunteers, and staff.
+					</p>
+					<p>
+						The PCD @ London team is dedicated to providing a harassment-free
+						experience for everyone, regardless of gender, gender identity and
+						expression, sexual orientation, disability, mental illness,
+						neurotype, physical appearance, body, age, race, ethnicity,
+						nationality, language, or religion. We do not tolerate harassment of
+						participants in any form.
+					</p>
+					<p>
+						Anyone participant who violates this Code of Conduct may be
+						sanctioned or expelled from PCD @ London at the discretion of UAL
+						staff.
+					</p>
 
-          <h3>Be mindful of your language</h3>
-          <p>
-            Engage with community members, mentors, and contributors with
-            respect and good intention.
-          </p>
+					<h3>Be mindful of your language</h3>
+					<p>
+						Engage with community members, mentors, and contributors with
+						respect and good intention.
+					</p>
 
-          <h3>Use your best judgement</h3>
-          <p>
-            If it will possibly make others uncomfortable, do not say it or post
-            to the community forum.
-          </p>
+					<h3>Use your best judgement</h3>
+					<p>
+						If it will possibly make others uncomfortable, do not say it or post
+						to the community forum.
+					</p>
 
-          <h3>Be respectful</h3>
-          <p>
-            While disagreements may arise, it is not an opportunity to attack or
-            threaten someone else’s thoughts and/or opinions. Remember to
-            approach every situation with patience, understanding, and great
-            care.
-          </p>
+					<h3>Be respectful</h3>
+					<p>
+						While disagreements may arise, it is not an opportunity to attack or
+						threaten someone else’s thoughts and/or opinions. Remember to
+						approach every situation with patience, understanding, and great
+						care.
+					</p>
 
-          <h3>Be intentional</h3>
-          <p>
-            Consider how your contribution will affect others in the community.
-          </p>
+					<h3>Be intentional</h3>
+					<p>
+						Consider how your contribution will affect others in the community.
+					</p>
 
-          <h3>Be open minded</h3>
-          <p>
-            Embrace new people and new ideas. Our community is continually
-            evolving and we welcome positive change.
-          </p>
+					<h3>Be open minded</h3>
+					<p>
+						Embrace new people and new ideas. Our community is continually
+						evolving and we welcome positive change.
+					</p>
 
-          <h3>Definitions of Harassment include</h3>
-          <ul>
-            <li>
-              Offensive comments related to gender, gender identity and
-              expression, sexual orientation, disability, mental illness,
-              neurotype, physical appearance, body, age, race, ethnicity,
-              nationality, language, or religion
-            </li>
-            <li>
-              Unwelcome comments regarding a person’s lifestyle choices and
-              practices, including those related to food, health, parenting,
-              drugs, and employment
-            </li>
-            <li>Deliberate misgendering or use of ‘dead’ or rejected names</li>
-            <li>
-              Gratuitous or off-topic sexual images or behaviour in spaces where
-              they’re not appropriate
-            </li>
-            <li>
-              Physical contact and simulated physical contact (eg, textual
-              descriptions like “hug” or “backrub”) without consent or after a
-              request to stop.
-            </li>
-            <li>Threats of violence</li>
-            <li>
-              Incitement of violence towards any individual, including
-              encouraging a person to commit suicide or to engage in self-harm
-            </li>
-            <li>Deliberate intimidation</li>
-            <li>Stalking or following</li>
-            <li>
-              Harassing photography or recording, including logging online
-              activity for harassment purposes
-            </li>
-            <li>Sustained disruption of discussion</li>
-            <li>Unwelcome sexual attention</li>
-            <li>
-              Pattern of inappropriate social contact, such as
-              requesting/assuming inappropriate levels of intimacy with others
-            </li>
-            <li>Continued one-on-one communication after requests to cease</li>
-            <li>
-              Deliberate “outing” of any aspect of a person’s identity without
-              their consent except as necessary to protect other PCD community
-              members or other vulnerable people from intentional abuse
-            </li>
-            <li>
-              Publication of non-harassing private communication without consent
-              by the involved parties
-            </li>
-          </ul>
+					<h3>Definitions of Harassment include</h3>
+					<ul>
+						<li>
+							Offensive comments related to gender, gender identity and
+							expression, sexual orientation, disability, mental illness,
+							neurotype, physical appearance, body, age, race, ethnicity,
+							nationality, language, or religion
+						</li>
+						<li>
+							Unwelcome comments regarding a person’s lifestyle choices and
+							practices, including those related to food, health, parenting,
+							drugs, and employment
+						</li>
+						<li>Deliberate misgendering or use of ‘dead’ or rejected names</li>
+						<li>
+							Gratuitous or off-topic sexual images or behaviour in spaces where
+							they’re not appropriate
+						</li>
+						<li>
+							Physical contact and simulated physical contact (eg, textual
+							descriptions like “hug” or “backrub”) without consent or after a
+							request to stop.
+						</li>
+						<li>Threats of violence</li>
+						<li>
+							Incitement of violence towards any individual, including
+							encouraging a person to commit suicide or to engage in self-harm
+						</li>
+						<li>Deliberate intimidation</li>
+						<li>Stalking or following</li>
+						<li>
+							Harassing photography or recording, including logging online
+							activity for harassment purposes
+						</li>
+						<li>Sustained disruption of discussion</li>
+						<li>Unwelcome sexual attention</li>
+						<li>
+							Pattern of inappropriate social contact, such as
+							requesting/assuming inappropriate levels of intimacy with others
+						</li>
+						<li>Continued one-on-one communication after requests to cease</li>
+						<li>
+							Deliberate “outing” of any aspect of a person’s identity without
+							their consent except as necessary to protect other PCD community
+							members or other vulnerable people from intentional abuse
+						</li>
+						<li>
+							Publication of non-harassing private communication without consent
+							by the involved parties
+						</li>
+					</ul>
 
-          PCD @ London prioritizes marginalized people’s safety over privileged
-          people’s comfort. PCD @ London reserves the right not to act on
-          complaints regarding:
-          <ul>
-            <li>
-              ‘Reverse’ -isms, including ‘reverse racism,’ ‘reverse sexism,’ and
-              ‘cisphobia’
-            </li>
-            <li>
-              Reasonable communication of boundaries, such as “leave me alone,”
-              “go away,” or “I’m not discussing this with you.”
-            </li>
-            <li>Communicating in a ‘tone’ you don’t find congenial</li>
-            <li>
-              Criticizing racist, sexist, cissexist, or otherwise oppressive
-              behavior or assumptions
-            </li>
-          </ul>
+					PCD @ London prioritizes marginalized people’s safety over privileged
+					people’s comfort. PCD @ London reserves the right not to act on
+					complaints regarding:
+					<ul>
+						<li>
+							‘Reverse’ -isms, including ‘reverse racism,’ ‘reverse sexism,’ and
+							‘cisphobia’
+						</li>
+						<li>
+							Reasonable communication of boundaries, such as “leave me alone,”
+							“go away,” or “I’m not discussing this with you.”
+						</li>
+						<li>Communicating in a ‘tone’ you don’t find congenial</li>
+						<li>
+							Criticizing racist, sexist, cissexist, or otherwise oppressive
+							behavior or assumptions
+						</li>
+					</ul>
 
-          <h3>
-            Consequences, Reporting and Enforcement on Processing Community Day
-          </h3>
-          <p>
-            Please contact Tom Lynch or Delia Hamwood as listed on
-            <a target="_blank" href="https://lab.arts.ac.uk/">lab.arts.ac.uk</a>
-            or any member of UAL staff (such as those at reception). You may
-            also contact us via email at
-            <a href="mailto:creativetechnologylab@arts.ac.uk"
-              >creativetechnologylab@arts.ac.uk</a
-            >.
-          </p>
-          <p>
-            Participants asked to stop any harassing behavior are expected to
-            comply immediately. If a participant engages in harassing behavior,
-            UAL staff will take action we deem appropriate, up to and including
-            expulsion from PCD @ London and identification of the participant as
-            a harasser to the Processing Foundation, other PCD organisers and/or
-            the general public.
-          </p>
+					<h3>
+						Consequences, Reporting and Enforcement on Processing Community Day
+					</h3>
+					<p>
+						Please contact Tom Lynch or Delia Hamwood as listed on
+						<a target="_blank" href="https://lab.arts.ac.uk/">lab.arts.ac.uk</a>
+						or any member of UAL staff (such as those at reception). You may
+						also contact us via email at
+						<a href="mailto:creativetechnologylab@arts.ac.uk">creativetechnologylab@arts.ac.uk</a>.
+					</p>
+					<p>
+						Participants asked to stop any harassing behavior are expected to
+						comply immediately. If a participant engages in harassing behavior,
+						UAL staff will take action we deem appropriate, up to and including
+						expulsion from PCD @ London and identification of the participant as
+						a harasser to the Processing Foundation, other PCD organisers and/or
+						the general public.
+					</p>
 
-          <h3>Acknowledgements</h3>
-          <p>
-            This Code of Conduct was edited for PCD @ London, but originally
-            compiled by Dorothy Santos, based on resources provided by Geek
-            Feminism, and borrows heavily from open source policies authored by
-            p5.js and XOXO Festival.
-          </p>
-          <p>
-            Thank you also to Lauren McCarthy, Johanna Hedva, and Xin Xin for
-            their advice and support.
-          </p>
-          <p>
-            This policy is licensed under a Creative Commons Attribution 4.0
-            International license and on the Processing Community Day website.
-            We encourage other organizations to adopt (and enforce) similar
-            Codes of Conduct by using and remixing this one.
-          </p>
-        </section>
+					<h3>Acknowledgements</h3>
+					<p>
+						This Code of Conduct was edited for PCD @ London, but originally
+						compiled by Dorothy Santos, based on resources provided by Geek
+						Feminism, and borrows heavily from open source policies authored by
+						p5.js and XOXO Festival.
+					</p>
+					<p>
+						Thank you also to Lauren McCarthy, Johanna Hedva, and Xin Xin for
+						their advice and support.
+					</p>
+					<p>
+						This policy is licensed under a Creative Commons Attribution 4.0
+						International license and on the Processing Community Day website.
+						We encourage other organizations to adopt (and enforce) similar
+						Codes of Conduct by using and remixing this one.
+					</p>
+				</section>
 
-        <section id="tickets-section">
-          <h2>Tickets</h2>
-          <p>
-            Tickets are not yet available, but will be linked here when they are
-            so keep checking back here.
-          </p>
-          <p>
-            They will be free and open to everyone on a first come first serve
-            basis.
-          </p>
-        </section>
+				<section id="tickets-section">
+					<h2>Tickets</h2>
+					<p>
+						Tickets are not yet available, but will be linked here when they are
+						so keep checking back here.
+					</p>
+					<p>
+						They will be free and open to everyone on a first come first serve
+						basis.
+					</p>
+				</section>
 
-        <section id="sponsors-section">
-          <h2>Sponsors</h2>
-          <p>
-            Event logistics, staffing and security is sponsored by
-            <a target="_blank" href="http://arts.ac.uk/lcc"
-              >London College of Communication</a
-            >. <img src="./assets/ual-lcc.png" />
-          </p>
-          <p>
-            Our speakers/workshop facilitiators costs are sponsored by the
-            <a
-              target="_blank"
-              href="https://www.arts.ac.uk/creative-computing-institute"
-              >Creative Computing Institute</a
-            >. <img src="./assets/ual-cci.png" />
-          </p>
-        </section>
-      </div>
+				<section id="sponsors-section">
+					<h2>Sponsors</h2>
+					<p>
+						Event logistics, staffing and security is sponsored by
+						<a target="_blank" href="http://arts.ac.uk/lcc">London College of Communication</a>.
+						<img src="./assets/ual-lcc.png" />
+					</p>
+					<p>
+						Our speakers/workshop facilitiators costs are sponsored by the
+						<a target="_blank" href="https://www.arts.ac.uk/creative-computing-institute">Creative Computing Institute</a>.
+						<img src="./assets/ual-cci.png" />
+					</p>
+				</section>
+			</div>
 
-      <script src="./main.js"></script>
-    </div>
-  </body>
+			<script src="./main.js"></script>
+		</div>
+	</body>
 </html>

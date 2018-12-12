@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "lessc style.less style.css"
+    "build": "lessc css/style.less css/style.css"
   },
   "repository": {
     "type": "git",

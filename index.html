@@ -5,83 +5,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="cache-control" content="no-cache" />
-
-    <!-- favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="./favicon/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="./favicon/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="./favicon/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="./favicon/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="./favicon/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="./favicon/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="./favicon/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="./favicon/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./favicon/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./favicon/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="./favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="./favicon/ms-icon-144x144.png"
-    />
     <meta name="theme-color" content="#ffffff" />
 
     <!-- iOS -->
@@ -104,6 +27,7 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
+
     <script src="p5.js/lib/p5.min.js"></script>
   </head>
   <body>
@@ -112,20 +36,20 @@
     <div id="wrapper">
       <header id="page-header">
         <div id="title-container">
-          <img id="pcd-logo" src="./assets/pcd-logo.jpg" />
+          <img id="pcd-logo" src="./assets/pcd-logo.png" />
           <div id="canvas-container">
             <h1 class="site-title">Processing Community Day</h1>
             <h3 class="site-subtitle">London</h3>
           </div>
         </div>
 
-        <h3>26th January 2019, London College of Communication</h3>
+        <h3>Saturday 26th January 2019, London College of Communication</h3>
 
-        <nav>
+        <nav id="site-navigation">
           <a class="section-links" href="#">About</a> |
-          <a class="section-links" href="#direction">Getting Here</a> |
+          <a class="section-links" href="#direction">Getting&nbspHere</a> |
           <a class="section-links" href="#access">Access</a> |
-          <a class="section-links" href="#conduct">Code of Conduct</a> |
+          <a class="section-links" href="#conduct">Code&nbspof&nbspConduct</a> |
           <a class="section-links" href="#tickets">Tickets</a> |
           <a class="section-links" href="#sponsors">Sponsors</a>
         </nav>
@@ -142,13 +66,20 @@
           </p>
           <p>
             PCD @ London is organised by Danilo Di Cuia, Joel Gethin Lewis,
-            Kenneth Lim and Tom Lynch, hosted at London College of Communication
-            and proudly supported by the University of the Arts London Creative
-            Computing Institute.
+            Kenneth Lim and Tom Lynch, hosted at
+            <a target="_blank" href="http://arts.ac.uk/lcc"
+              >London College of Communication</a
+            >
+            and proudly supported by the University of the Arts London
+            <a
+              target="_blank"
+              href="https://www.arts.ac.uk/creative-computing-institute"
+              >Creative Computing Institute</a
+            >.
           </p>
 
           <h3>When:</h3>
-          <p>Saturday 26th January 2019, 10:30 - 17:00</p>
+          <p>Saturday 26th January 2019, 10:30 - 16:00</p>
 
           <h3>What:</h3>
           <p>
@@ -162,8 +93,9 @@
             <a
               target="_blank"
               href="https://www.doc.gold.ac.uk/~mas01rf/homepage/"
-              >Rebecca Fiebrink</a
             >
+              Rebecca Fiebrink
+            </a>
             as well as our already legendary community based lightning talks!
             ⚡⚡⚡⚡
           </p>
@@ -194,6 +126,7 @@
           <h3>Map</h3>
           <p>
             <iframe
+              id="google-maps"
               width="600"
               height="450"
               frameborder="0"
@@ -301,14 +234,14 @@
           <h3>Other access requirements</h3>
           <p>
             If you have any access requirements, please contact us after
-            registering for a ticket (once tickets are made available) so that
-            we can investigate what options are available.
+            registering for a ticket so that we can investigate what options are
+            available.
           </p>
           <p>
             Although the event is being generously hosted by London College of
             Communication it is organised by a group of volunteers so any access
-            changes may be limited by our access to sponsors but we are keen to
-            try an accomodate everyone.
+            changes may be limited by our access to sponsorship but we are keen
+            to try an accomodate everyone.
           </p>
         </section>
 
@@ -480,12 +413,16 @@
         <section id="tickets-section">
           <h2>Tickets</h2>
           <p>
-            Tickets are not yet available, but will be linked here when they are
-            so keep checking back here.
+            Tickets to Processing Community Day London are available
+            <a
+              target="_blank"
+              href="https://www.eventbrite.co.uk/e/processing-community-day-london-2019-tickets-53582129592"
+              >here</a
+            >.
           </p>
           <p>
-            They will be free and open to everyone on a first come first serve
-            basis.
+            Tickets to the event are free and open to everyone on a first come
+            first serve basis.
           </p>
         </section>
 
@@ -495,7 +432,7 @@
             Event logistics, staffing and security is sponsored by
             <a target="_blank" href="http://arts.ac.uk/lcc"
               >London College of Communication</a
-            >. <img src="./assets/ual-lcc.png" />
+            >. <img src="./assets/ual-lcc.png" class="ual-logo" />
           </p>
           <p>
             Our speakers/workshop facilitiators costs are sponsored by the
@@ -503,7 +440,7 @@
               target="_blank"
               href="https://www.arts.ac.uk/creative-computing-institute"
               >Creative Computing Institute</a
-            >. <img src="./assets/ual-cci.png" />
+            >. <img src="./assets/ual-cci.png" class="ual-logo" />
           </p>
         </section>
       </div>

@@ -1,12 +1,9 @@
-let myfont;
 let glyphs = [];
-let advance = 0;
 let totalAdvance;
-let ratio;
 let font;
-
-const FONTSIZE = 200;
 let glyphsPaths = [];
+let minX;
+let maxX;
 
 function preload() {
   font = loadFont("./assets/fonts/RobotoSlab-Regular.ttf");
@@ -15,7 +12,6 @@ function preload() {
 function init() {
   // Go for more complex navigation when JS is present
   hashChange();
-
   // Navigation
   $("#page-header nav .section-links").click(function(e) {
     e.preventDefault();
@@ -24,7 +20,6 @@ function init() {
   $(window).on("hashchange", function() {
     hashChange();
   });
-
   // Utilities
   function hashChange() {
     $("#page-content>section").css("display", "none");
@@ -52,9 +47,7 @@ function init() {
       default:
         sectionName = "about";
     }
-
     $(`#page-content > #${sectionName}-section`).css("display", "block");
-
     changeGlyphs(sectionName);
   }
 }
@@ -65,9 +58,6 @@ function setup() {
   init();
   noStroke();
 }
-
-let minX;
-let maxX;
 
 function changeGlyphs(string) {
   glyphs = font.textToPoints(string, 0, 0, 300, {
@@ -99,10 +89,6 @@ function draw() {
 }
 
 function drawGlyphs() {
-  const m = millis() * 0.001;
-  const n = mouseX / width;
-  let aw = 0;
-
   fill(0, 0, 0, 50);
 
   glyphsPaths.forEach(paths => {

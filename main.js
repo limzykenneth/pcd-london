@@ -1,112 +1,109 @@
-let myfont;
 let glyphs = [];
-let advance = 0;
 let totalAdvance;
-let ratio;
 let font;
-const FONTSIZE = 200;
+let glyphsPaths = [];
+let minX;
+let maxX;
 
 function preload() {
-	font = loadFont("./assets/fonts/RobotoSlab-Regular.ttf");
+  font = loadFont("./assets/fonts/RobotoSlab-Regular.ttf");
 }
 
 function init() {
-	// Go for more complex navigation when JS is present
-	hashChange();
-	// Navigation
-	$("#page-header nav .section-links").click(function(e) {
-		e.preventDefault();
-		window.location.hash = $(this).attr("href");
-	});
-	$(window).on("hashchange", function() {
-		hashChange();
-	});
-	// Utilities
-	function hashChange() {
-		$("#page-content>section").css("display", "none");
-		let sectionName;
-		switch (window.location.hash) {
-			case "":
-			case "#":
-				sectionName = "about";
-				break;
-			case "#direction":
-				sectionName = "direction";
-				break;
-			case "#access":
-				sectionName = "access";
-				break;
-			case "#conduct":
-				sectionName = "conduct";
-				break;
-			case "#tickets":
-				sectionName = "tickets";
-				break;
-			case "#sponsors":
-				sectionName = "sponsors";
-				break;
-			default:
-				sectionName = "about";
-		}
-		$(`#page-content > #${sectionName}-section`).css("display", "block");
-		console.log(sectionName);
-		changeGlyphs(sectionName);
-	}
+  // Go for more complex navigation when JS is present
+  hashChange();
+  // Navigation
+  $("#page-header nav .section-links").click(function(e) {
+    e.preventDefault();
+    window.location.hash = $(this).attr("href");
+  });
+  $(window).on("hashchange", function() {
+    hashChange();
+  });
+  // Utilities
+  function hashChange() {
+    $("#page-content>section").css("display", "none");
+    let sectionName;
+    switch (window.location.hash) {
+      case "":
+      case "#":
+        sectionName = "about";
+        break;
+      case "#direction":
+        sectionName = "direction";
+        break;
+      case "#access":
+        sectionName = "access";
+        break;
+      case "#conduct":
+        sectionName = "conduct";
+        break;
+      case "#tickets":
+        sectionName = "tickets";
+        break;
+      case "#sponsors":
+        sectionName = "sponsors";
+        break;
+      default:
+        sectionName = "about";
+    }
+    $(`#page-content > #${sectionName}-section`).css("display", "block");
+    changeGlyphs(sectionName);
+  }
 }
 
 function setup() {
-	const cnv = createCanvas(screen.width, screen.height);
-	cnv.parent("sketch-holder");
-	init();
-	totalAdvance = glyphs.reduce((a, b) => a + b.bounds.w, 0);
-	ratio = (width * 0.8) / totalAdvance;
-	noStroke();
-	fill("rgba(0,0,0,0.15)");
-}
-
-function draw() {
-	background(255);
-	if (!glyphs.length) return;
-	translate((width - totalAdvance * ratio) * 0.5, height * 0.5);
-	advance = 0;
-	glyphs.forEach(g => {
-		drawGlyph(g);
-		advance += g.bounds.w;
-	});
+  const cnv = createCanvas(screen.width, screen.height);
+  cnv.parent("sketch-holder");
+  init();
+  noStroke();
 }
 
 function changeGlyphs(string) {
-	glyphs = [];
-	string.split("").forEach(addGlyph);
+  glyphs = font.textToPoints(string, 0, 0, 300, {
+    sampleFactor: 2,
+    simplifyThreshold: 0
+  });
+
+  minX = Infinity;
+  maxX = 0;
+  glyphsPaths = [];
+  glyphs.forEach(d => {
+    if (!glyphsPaths[d.glyphIndex]) glyphsPaths[d.glyphIndex] = [];
+    if (!glyphsPaths[d.glyphIndex][d.pathIndex]) glyphsPaths[d.glyphIndex][d.pathIndex] = [];
+    if (d.x < minX) minX = d.x;
+    if (d.x > maxX) maxX = d.x;
+    glyphsPaths[d.glyphIndex][d.pathIndex].push(d);
+  });
+
+  totalAdvance = maxX - minX;
+
+  drawGlyphs();
 }
 
-function addGlyph(glyph) {
-	const b = font.textBounds(glyph, 0, 0, FONTSIZE);
-	glyphs.push({
-		points: font.textToPoints(glyph, 0, 0, FONTSIZE, {
-			sampleFactor: 0.2,
-			simplifyThreshold: 0
-		}).map(d => {
-			return {
-				x: d.x,
-				y: d.y
-			};
-		}),
-		bounds: b
-	});
+function draw() {
+  background(255);
+  if (!glyphs.length) return;
+  translate((width - totalAdvance) / 2 - minX, height / 2 - 0);
+  drawGlyphs();
 }
 
-function drawGlyph(g) {
-	const points = g.points;
-	beginShape();
-	const m = millis() * 0.001;
-	const n = mouseX / width;
-	points.forEach(p => {
-		let x = p.x + advance;
-		const i = x / totalAdvance;
-		const f = Math.sin(i * n * 20 + m);
-		const y = p.y * f;
-		vertex(x * ratio, y * ratio);
-	});
-	endShape(CLOSE);
+function drawGlyphs() {
+  fill(0, 0, 0, 50);
+
+  glyphsPaths.forEach(paths => {
+    beginShape();
+    paths.forEach(points => {
+      const m = millis() * 0.001;
+      const n = mouseX / width;
+      points.forEach(p => {
+        let x = p.x;
+        const i = x / totalAdvance;
+        const f = sin(i * n * 20 + m);
+        const y = p.y * f;
+        vertex(x, y);
+      });
+    });
+    endShape();
+  });
 }

@@ -42,6 +42,8 @@ a:hover {
 }
 #sketch-holder {
   position: fixed;
+  top:0;
+  left:0;
 }
 #page-header h1 {
   color: #001d22;

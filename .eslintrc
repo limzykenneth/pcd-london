@@ -4,6 +4,7 @@
   },
   "rules": {
     "semi": ["error", "always"],
+    "no-unused-vars": ["error"],
     "max-len": ["error", { "code": 200 }],
     "quotes": ["error", "double"]
   }

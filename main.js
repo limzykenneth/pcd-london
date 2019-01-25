@@ -60,7 +60,7 @@ function setup() {
 }
 
 function changeGlyphs(string) {
-  glyphs = font.textToPoints(string, 0, 0, 300, {
+  glyphs = font.textToPoints(string, 0, 0, 400, {
     sampleFactor: 2,
     simplifyThreshold: 0
   });
@@ -89,7 +89,7 @@ function draw() {
 }
 
 function drawGlyphs() {
-  fill(0, 0, 0, 50);
+  fill(0, 0, 0, 10);
 
   glyphsPaths.forEach(paths => {
     beginShape();
@@ -99,7 +99,7 @@ function drawGlyphs() {
       points.forEach(p => {
         let x = p.x;
         const i = x / totalAdvance;
-        const f = sin(i * n * 20 + m);
+        const f = sin(i * n * 40 + m);
         const y = p.y * f;
         vertex(x, y);
       });

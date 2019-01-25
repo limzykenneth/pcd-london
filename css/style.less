@@ -36,11 +36,11 @@ a {
   padding: 1rem 2rem;
   margin-bottom: 4rem;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     width: 90%;
   }
 
-  @media screen and (max-width: 414px){
+  @media screen and (max-width: 414px) {
     width: 100%;
   }
 }
@@ -79,11 +79,11 @@ a {
         margin-bottom: 0;
         font-size: 3rem;
 
-        @media screen and (max-width: 790px){
+        @media screen and (max-width: 790px) {
           font-size: 2.3rem;
         }
 
-        @media screen and (max-width: 414px){
+        @media screen and (max-width: 414px) {
           font-size: 1.5rem;
         }
       }
@@ -95,12 +95,12 @@ a {
     }
   }
 
-  #site-navigation{
-    @media screen and (max-width: 790px){
+  #site-navigation {
+    @media screen and (max-width: 790px) {
       line-height: 2rem;
     }
 
-    @media screen and (max-width: 414px){
+    @media screen and (max-width: 414px) {
       line-height: 2rem;
     }
   }
@@ -108,15 +108,16 @@ a {
 
 #page-content {
   position: relative;
+  line-height: 1.4;
 
-  #direction-section{
-    #google-maps{
-      @media screen and (max-width: 790px){
+  #direction-section {
+    #google-maps {
+      @media screen and (max-width: 790px) {
         width: ~"calc(90vw - 4rem)";
         height: ~"calc(90vw - 4rem)";
       }
 
-      @media screen and (max-width: 414px){
+      @media screen and (max-width: 414px) {
         width: ~"calc(100vw - 4rem)";
         height: ~"calc(100vw - 4rem)";
       }
@@ -128,11 +129,11 @@ a {
       display: block;
       height: auto;
 
-      @media screen and (max-width: 790px){
+      @media screen and (max-width: 790px) {
         max-width: ~"calc(90vw - 4rem)";
       }
 
-      @media screen and (max-width: 414px){
+      @media screen and (max-width: 414px) {
         max-width: ~"calc(100vw - 4rem)";
       }
     }
@@ -144,6 +145,27 @@ a {
 }
 
 .ual-logo {
-    max-width: 300px;
-    padding: 15px 0;
+  max-width: 300px;
+  padding: 15px 0;
+}
+
+.program-table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.program-table tr td:nth-child(1) {
+  width: 5%;
+}
+
+.program-table tr td:nth-child(2) {
+  width: 10%;
+}
+
+.program-table tr td:nth-child(3) {
+  width: 40%;
+}
+
+.program-table td {
+  padding: 10px 20px 10px 0;
 }
